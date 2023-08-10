@@ -1,20 +1,21 @@
-//      *
-//    * * 
-//  * * *         
-//* * * *        
+// ****
+//  ***
+//   **
+//    *
 
 #include<stdio.h>
+
 int main()
-{   
-    int n=5;
-    for(int i=1;i<=n;i++)
+{
+    int n=4;
+    for(int i=n;i>=1;i--)
     {
         int temp = n-i;
-        for(int k=temp;k>=1;k--)
+        for(int j=temp;j>0;j--)
         {
             printf(" ");
         }
-        for(int j=1;j<=i;j++)
+        for(int k=i;k>=1;k--)
         {
             printf("*");
         }
