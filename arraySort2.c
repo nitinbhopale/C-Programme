@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//Descending Sorting of Array
 int Sort(int arr[],int no)
 {
     int temp = 0;

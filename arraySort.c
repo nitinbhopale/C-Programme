@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+//Ascending sorting of array
 int sort(int arr[], int  no)
 {
     int temp = 0;
