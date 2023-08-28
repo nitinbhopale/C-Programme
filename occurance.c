@@ -1,11 +1,11 @@
 #include<stdio.h>
 
-int printUnique(int arr[],int no)
+int Occurance(int arr[],int no)
 {
     
     for(int i=0;i<no;i++)
     {
-        int cnt=0;
+        int cnt = 0;
         for(int j=0;j<no;j++)
         {
             if(arr[i]==arr[j])
@@ -13,15 +13,11 @@ int printUnique(int arr[],int no)
                 cnt++;
             }
         }
-        
-        if(cnt==1)
-        {
-            
-            printf("%d ",arr[i]);
-        }
+        printf("The Occurance of %d is %d \n",arr[i],cnt);
     }
     return 0;
 }
+
 int main()
 {
     int no = 0;
@@ -33,7 +29,7 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
-    printf("The Unique Element:\n");
-    printUnique(arr,no);
+
+    Occurance(arr,no);
     return 0;
 }
