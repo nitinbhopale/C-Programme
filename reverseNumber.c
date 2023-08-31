@@ -6,7 +6,7 @@ int Reverse(int iNo)
     int no = iNo;
     int cnt = 0;
     while(no!=0)
-    {
+    { 
         no = no/10;
         cnt++;
     }
@@ -23,4 +23,4 @@ int main()
     int Ret = Reverse(value);
     printf("Reverse:%d\n",Ret);
     return 0;
-}
+} 
