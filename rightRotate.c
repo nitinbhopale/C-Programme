@@ -1,24 +1,26 @@
 /*
     input : array = [1,2,3,4,5] no = 2 
-    output : arry = [3,4,5,1,2] 
+    output : arry = [4,5,1,2,3] 
 */
-#include<stdio.h>
 
-int LeftRotate(int arr[], int no, int rotate)
+#include<stdio.h>
+int rightRotate(int arr[], int no, int rotate)
 {
-    int first_ele = 0;
+    int last_element = 0;
+
     for(int i=0;i<rotate;i++)
     {
-        first_ele = arr[0];
-        for(int j=0;j<no-1;j++)
+        last_element = arr[no-1];
+        for(int j=no-1;j>=0;j--)
         {
-            arr[j] = arr[j+1];
+            
+            arr[j] = arr[j-1];
         }
-        arr[no-1] = first_ele;
+        arr[0] = last_element;
     }
     for(int i=0;i<no;i++)
     {
-        printf("%d=>",arr[i]);
+        printf("%d ",arr[i]);
     }
     return 0;
 }
@@ -34,9 +36,9 @@ int main()
         scanf("%d",&arr[i]);
     }
     int rotate = 0;
-    printf("Enter rotating number\n");
+    printf("Enter Rotating Number\n");
     scanf("%d",&rotate);
 
-    LeftRotate(arr,no,rotate);
+    rightRotate(arr,no,rotate);
     return 0;
 }
